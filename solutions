@@ -3,4 +3,27 @@
 //此时我们可以现在命令行输入 git config --global http.sslVerify “false” 然后再重新进行git clone 
 
 //git pull
+error: RPC failed; curl 56 OpenSSL SSL_read: Connection was reset, errno 10054
 
+原因：远程仓库的文件过大，需要设置本地仓库大小
+
+二、解决方法：
+首先输入如下命令：
+
+git config http.sslVerify "false"
+1
+若出现下列错误：
+
+git config http.sslVerify “false” fatal: not in a git directory
+
+再继续执行 git config --globle http.sslVerify "false" 问题解决
+
+
+文件大小的上限设置：
+git config --global http.postBuffer 524288000
+
+
+如果还是git代码还是下载失败，则需要继续修改git缓存的大小
+————————————————
+版权声明：本文为CSDN博主「冰糖有点甜哎ฅ۶•ﻌ•♡」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/m0_58828100/article/details/125621514
