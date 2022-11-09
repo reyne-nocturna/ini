@@ -39,3 +39,27 @@ From https://github.com/RueDeBoxer/CS61B
  * branch            main       -> FETCH_HEAD
  * [new branch]      main       -> skeleton/main
 Already up to date.
+
+//虚拟机问题
+https://www.cnblogs.com/woider/p/6533709.html#:~:text=%E7%99%BB%E5%BD%95%20GitHub%EF%BC%8C%E6%89%93%E5%BC%80%20Personal%20settings%20%E9%A1%B5%E9%9D%A2%EF%BC%8C%E9%80%89%E6%8B%A9%20SSH%20and%20GPG,%E4%B9%8B%E5%90%8E%EF%BC%8CLinux%20%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%20SSH%20%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%20Git%20%E4%B8%8E%20GitHub%20%E7%9A%84%E8%BF%9E%E6%8E%A5%E4%BA%86%E3%80%82
+一、安装 Git
+　　* 如果你已经安装好了 Git，可以忽略这一步
+
+　　Ubuntu 安装 Git：  apt-get install git  
+
+　　CentOS 安装 Git：  yum install git  
+
+　　查看 Git 版本信息：  git version  
+
+　　配置 Git 用户信息：
+
+ git config --global user.name "woider"
+ git config --global user.email "woider@gmail.com"
+↑ 把用户名和邮箱换成你自己的，键入命令后屏幕没有输出，则表示设置成功了
+
+二、开启 SSH 服务
+　　* 如果你使用的是 CentOS，则默认开启了 SSH，可以忽略这一步
+
+　　Ubuntu 安装 SSH：  apt-get install ssh  
+
+　　查看 SSH 服务状态：  ps -e | grep sshd  
